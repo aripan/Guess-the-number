@@ -1,0 +1,53 @@
+body {
+    /* background-repeat: no-repeat, background-position: center center, background-attachment: fixed */
+    background: url("background.jpg") no-repeat center center fixed; 
+    background-size: cover;
+}
+
+#container {
+    background-color: rgb(186, 224, 212, 0.4);
+    /* max-width is more friendly and usable for different devices: basically more resposive */
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    /* em is a relative font size */
+    font-size: 1.2em;
+
+}
+
+.panel {
+    background-color: rgba(196, 183, 165, 0.7);
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.upperLines {
+    font-family: Sofia;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+button {
+    background-color: rgba(51, 55, 59, 0.5);
+    color: rgb(236, 227, 227);
+    font-size: 17px;
+    font-weight: 700;
+    width: 40vw;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+input {
+    text-align: center;
+    font-size: 1.1em;
+    width: 50%;
+    height: 1.5em;
+    padding: 5px;
+    border-radius: 5px 25px;
+}
+

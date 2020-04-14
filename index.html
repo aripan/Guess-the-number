@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+
+    <!-- Linking JavaScript file -->
+    <script type="text/JavaScript" src="script.js"></script>
+
+    <!-- Linking CSS file -->
+    <link rel="stylesheet" type="text/CSS" href="style.css">
+    <title>Guess the number game</title>
+</head>
+
+<!-- onload: To execute the random number immediately after the page has been loaded -->
+<body onload = "init()">
+    <div id="container">
+
+        <!-- First Box -->
+        <div class="panel">
+            <div class="upperLines">
+                <h2>I have a random number<br>between 1 ~ 100</h2>
+                <h4>Dare to guess?</h4>
+                <hr>
+            </div>
+
+            <p>Select difficulty setting:</p>
+
+            <!-- onclick: To execute a JavaScript file when a button is clicked -->
+            <button id="easyBtn" onclick="easyMode ()" class="">Easy: Guess in 10 attempts (default)</button>
+            <button id="mediumBtn" onclick="mediumMode ()" class="">Medium: Guess in 6 attempts</button>
+            <button id="hardBtn" onclick="hardMode ()" class="">Hard: Guess in 3 attempts</button>	 
+            
+            <!-- Reset the game again -->
+            <button id="newGameBtn" onclick = "newGame()">NEW GAME</button>
+        </div>
+
+        <!-- Second Box -->
+        <div class="panel">
+            <h3 id="textOutput">Enter your guess below &amp; press enter</h3>
+            
+            <!-- onchange: To execute the JavaScript file when a user changes the selected option of an element
+                 autocomplete: To turn off/ on autocomplete for input fields -->
+            <input type="number" name="form" id="inputNumber" class="number" 
+                placeholder="What's your guess?" onchange = "compareGuess()" autocomplete="off">
+            <p>Number of previous attempts: 
+                <span id="attempts">0</span>  <!-- Number of attempts will be added in this tag -->
+            </p>
+        </div>
+
+        <!-- Third Box -->
+        <div class="panel">
+            <p>Your previous guesses:</p>
+            <p id="guessLog">
+                <!-- Guess history will be here -->
+            </p>
+        </div>
+    </div>
+</body>
+</html>
